@@ -1,4 +1,4 @@
-# Local RAG Knowledge Base
+# (WIP) Local RAG Knowledge Base
 
 A standalone, locally operated document knowledge base for semantic retrieval and question answering using your own documents.
 
