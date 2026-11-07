@@ -27,5 +27,6 @@ Consult actual project tooling before running commands.
 
 ## Delivery authority
 
-- No durable tracker is configured. Do not require issue creation, claiming, or closure, or invent a markdown TODO tracker. Report remaining work in the handoff.
+- Beads is selected for durable work. Run `bd prime` to verify availability before tracker operations; do not use markdown TODO files as the project tracker.
+- For tracker operations, read `docs/agents/issue-tracker.md`.
 - Do not commit, push, open pull requests, or synchronize an external tracker unless the user explicitly authorizes those actions. Authorization already given for the current task remains valid.
