@@ -30,3 +30,9 @@ Consult actual project tooling before running commands.
 - Beads is selected for durable work. Run `bd prime` to verify availability before tracker operations; do not use markdown TODO files as the project tracker.
 - For tracker operations, read `docs/agents/issue-tracker.md`.
 - Do not commit, push, open pull requests, or synchronize an external tracker unless the user explicitly authorizes those actions. Authorization already given for the current task remains valid.
+
+## Planning skills
+
+For `grill-with-docs`, `to-spec`, and `to-tickets`, read
+`docs/agents/planning.md`. Follow the repository's tracker, domain
+documentation, and delivery authority.
