@@ -1,40 +1,26 @@
 ---
 name: application-delivery
-description: Plan and deliver durable changes in this application repository. Use when shaping approved work, claiming tracked work, implementing a vertical slice, or preparing handoff; do not use for an informational or read-only inspection.
+description: Plan, implement, validate, and hand off changes in this repository. Use for durable application changes and vertical slices, not read-only inspection.
 ---
 
 # Application delivery
 
-Use this repository's domain language, specifications, and delivery authority.
-This workflow coordinates durable work; focused skills retain ownership of
-their individual procedures.
+Use the repository's contracts, vocabulary, and delivery permissions. Focused skills retain ownership of their individual procedures.
 
-## Read what the task needs
+## Prepare
 
-1. Read `AGENTS.md`.
-2. Read `GLOSSARY.md` when domain vocabulary or invariants matter.
-3. Read relevant ADRs and `docs/specs/README.md` before changing consequential
-   behaviour.
-4. For durable Beads work, read `references/workflow.md`.
+1. Read `AGENTS.md` and the relevant design, domain, specification, or ADR documents.
+2. If `AGENTS.md` declares a tracker, follow its referenced guidance. Otherwise do not require issue creation, claiming, or closure.
+3. Small, understood changes may proceed directly. For substantial features or consequential changes, resolve uncertainty and work in independently testable slices.
 
-## Route the work
+## Implement and validate
 
-- Clarify consequential product or domain uncertainty before implementation.
-- For small, well-understood changes with bounded impact, work directly from the
-  request and existing contracts; do not create a specification or vertical-slice
-  plan solely because those artifacts are absent. Examples include a focused bug
-  fix, a local refactor, or a documentation correction.
-- Use specifications and independently valuable vertical slices for substantial
-  features, consequential contract changes, or work spanning multiple concerns.
-  Escalate uncertainty or risk even when the implementation is small.
 - Implement behavioural changes test-first at the relevant public boundary.
-- Run the authoritative validation command before handoff. If it is unconfigured,
-  use checks justified by the actual project and report the missing quality gate;
-  never invent a command or claim an unperformed check passed.
+- Run the repository's authoritative validation command. If none is configured, use justified available checks and report the missing quality gate; never invent a passing result.
+- A pull request is not completion until applicable integration gates pass.
 
-## Boundaries
+## Handoff
 
-- Keep durable state in Beads; temporary execution notes are not a project tracker.
-- A pull request is not completion unless this repository's policy says the
-  required integration gates have passed.
-- This skill never expands the authority stated in `AGENTS.md`.
+- Follow `AGENTS.md` permissions for commits, PRs, and external synchronization.
+- Write descriptive commit messages. For a PR, briefly state **purpose**, **relevant contract or issue**, **changes**, **verification**, and **known limitations**. Link to specifications rather than copying them. Keep trivial PRs proportionally short.
+- Report changed files, verification results, remaining work, and tracker state if configured.
