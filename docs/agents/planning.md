@@ -6,9 +6,6 @@ Use this workflow for substantial application development or consequential chang
 
 ## Skills and sources
 
-- `grill-with-docs` uses `grilling` and `domain-modeling` to resolve decisions.
-- `to-spec` publishes an agreed specification; `to-tickets` publishes approved,
-  independently verifiable implementation slices.
 - Use `GLOSSARY.md` for domain vocabulary and relevant ADRs under `docs/adr/`
   for durable architectural decisions. Read other design documents according
   to `AGENTS.md`. Create glossary entries and ADRs only when justified.
